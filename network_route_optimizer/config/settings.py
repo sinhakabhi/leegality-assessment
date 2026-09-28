@@ -1,10 +1,3 @@
-"""
-Django settings for the network_route_optimizer project.
-
-All environment-specific values are read from environment variables
-(optionally loaded from a local ``.env`` file). See ``.env.example``.
-"""
-
 import os
 from pathlib import Path
 
@@ -71,7 +64,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 
-# Database — SQLite by default; any Django backend can be configured via env vars.
+# Database
 
 DATABASES = {
     "default": {
@@ -107,6 +100,5 @@ STATIC_URL = "static/"
 
 REST_FRAMEWORK = {
     "EXCEPTION_HANDLER": "routing.exceptions.api_exception_handler",
-    # Render latencies as JSON numbers (e.g. 12.5) rather than strings ("12.500").
     "COERCE_DECIMAL_TO_STRING": False,
 }
