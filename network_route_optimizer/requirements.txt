@@ -1,0 +1,7 @@
+Django==6.1.1
+djangorestframework==3.18.1
+python-dotenv==1.2.3
+
+# Dev tooling
+black==26.5.1
+ruff==0.16.9
